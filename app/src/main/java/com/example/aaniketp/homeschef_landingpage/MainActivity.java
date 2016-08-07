@@ -2,21 +2,23 @@ package com.example.aaniketp.homeschef_landingpage;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements LandingPageFragment.OnFragmentInteractionListener, NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements LandingPageFragment.OnFragmentInteractionListener, NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements LandingPageFragme
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -93,16 +95,25 @@ public class MainActivity extends AppCompatActivity implements LandingPageFragme
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
+        int id = item.getItemId();
+        Bundle args = new Bundle();
+//        final FragmentManager fragmentManager = getFragmentManager();
+//        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        args.putString("Adding","true");
+        Log.v("Nav","Selected");
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         if (id == R.id.nav_camera) {
+            Log.v("StringTest","Clicked");
+            Intent i = new Intent(this,Form.class);
+            startActivity(i);
+
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
+            Log.v("StringTest","Clicked");
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
