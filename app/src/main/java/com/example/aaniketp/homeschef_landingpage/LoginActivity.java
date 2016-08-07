@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
+
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset, skipbutton;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -54,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Log.d("SignIn", "onAuthStateChanged:signed_in:" + user.getUid());
+                    Log.d("SignIn ", "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
                     Log.d("SignOut", "onAuthStateChanged:signed_out");
