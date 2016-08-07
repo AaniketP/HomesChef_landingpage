@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1000429685053",
+    "firebase_url": "https://homeschef-eae11.firebaseio.com",
+    "project_id": "homeschef-eae11",
+    "storage_bucket": "homeschef-eae11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000429685053:android:488b74bc71da459b",
+        "android_client_info": {
+          "package_name": "com.example.aaniketp.homeschef_landingpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000429685053-o8fp4trncpmjstaanvj2d4ct6dh9stiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcosMLfoTEzgfGQRwIEiNay-EBjp88IM4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
